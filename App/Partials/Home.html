@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+    <div class="home-wrapper">
+        <!--This is the Home Content-->
+        <div ng-hide="isLogged">
+            <div class="col-md-6 admin-login--wrapper">
+                <div class="admin-login">
+                    <a href="#/adminLogin">Login as Admin</a>
+                </div>
+            </div>
+            <div class="col-md-6 employee-login--wrapper">
+                <div class="employee-login">
+                    <a href="#/employeeLogin">Login as Employee</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="isLogged-home" ng-show="isLogged">
+            <div class="isLogged-label">
+                <span>Your are Back to Home Page..!!</span>
+            </div>
+            <input type="button"  class="btn btn-success" ng-click="details()" name="" value="Click Here To Go back To Details">
+        </div>
+    </div>
+</body>
+</html>

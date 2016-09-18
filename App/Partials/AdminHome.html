@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="headerDiv" class="employee-details--wrapper jumbotron">
+    <div id="heading" class="employee-details--label"> Employee Details</div>
+    <input type="button" id="ajaxBtn" class="btn btn-success get-data-btn" value="Click Here" ng-click="getEmployeeData()">
+</div>
+
+<div>
+    <div class="container">
+        <div>
+            <div class="search-box">
+                <input class="searchBox" type="text" ng-model="query" placeholder="Search.." ng-show="searchBox">
+            </div>
+            <div id ="dataTable" class="table-responsive">
+                <table class="table table-bordered table-responsive" ng-show="showTable">
+                    <thead>
+                    <tr class="bg-success">
+                        <th class="col-sm-1 col-xs-1"> ID </th>
+                        <th class="col-sm-1 col-xs-1"> Name </th>
+                        <th class="col-sm-1 col-xs-1"> Employee Code </th>
+                        <th class="col-sm-1 col-xs-1"> Email </th>
+                        <th class="col-sm-1 col-xs-1"> Address </th>
+                        <th class="col-sm-1 col-xs-1"> Current Location</th>
+                    </tr>
+                    </thead>
+                    <tbody ng-repeat="data in datas | filter:query" >
+                    <tr>
+
+                        <td class="col-sm-1 col-xs-1"> {{data.id  }}</td>
+                        <td class="col-sm-1 col-xs-1">  {{data.name}} </td>
+                        <td class="col-sm-1 col-xs-1"> {{data.username}}</td>
+                        <td class="col-sm-1 col-xs-1"> {{data.email}}</td>
+                        <td class="col-sm-1 col-xs-1">
+                            {{data.address.suite}} <br>
+                            {{data.address.city}}<br>
+                            {{data.address.zipcode}}<br>
+                        </td>
+                        <td class="col-md-1 col-sm-1 col-xs-1">
+                            LAT:{{data.address.geo.lat}}<br>
+                            LONG:{{data.address.geo.lng}}
+                            <div class="viewmap">
+                                <a target="_blank" href="http://maps.google.com/?q={{data.address.geo.lat}},{{data.address.geo.lng}}"> View in Map </a>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

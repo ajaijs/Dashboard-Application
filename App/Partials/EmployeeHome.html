@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class="employee--wrapper">
+        <div class="employee-details">
+            <div class="employee-details--label">
+                Your Details..
+            </div>
+            <div class="employee-details--table">
+                <table class="table table-bordered table-responsive">
+                    <thead>
+                    <tr class="bg-success">
+                        <th class="col-sm-1 col-xs-1"> ID </th>
+                        <th class="col-sm-1 col-xs-1"> Name </th>
+                        <th class="col-sm-1 col-xs-1"> Employee Code </th>
+                        <th class="col-sm-1 col-xs-1"> Email </th>
+                        <th class="col-sm-1 col-xs-1"> Address </th>
+                        <th class="col-sm-1 col-xs-1"> Current Location</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+
+                        <td class="col-sm-1 col-xs-1"> {{employeeData.id}}</td>
+                        <td class="col-sm-1 col-xs-1">  {{employeeData.name}} </td>
+                        <td class="col-sm-1 col-xs-1"> {{employeeData.username}}</td>
+                        <td class="col-sm-1 col-xs-1"> {{employeeData.email}}</td>
+                        <td class="col-sm-1 col-xs-1">
+                            {{employeeData.address.suite}} <br>
+                            {{employeeData.address.city}}<br>
+                            {{employeeData.address.zipcode}}<br>
+                        </td>
+                        <td class="col-md-1 col-sm-1 col-xs-1">
+                            LAT:{{employeeData.address.geo.lat}}<br>
+                            LONG:{{employeeData.address.geo.lng}}
+                            <div class="viewmap">
+                                <a target="_blank" href="http://maps.google.com/?q={{data.address.geo.lat}},{{data.address.geo.lng}}"> View in Map </a>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,195 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  position: relative;
+  max-width: 1568px;
+  opacity: 1; }
+  body.loading {
+    opacity: 0.5;
+    background: url("giphy.gif") no-repeat fixed center; }
+
+.wrapper {
+  background-color: #FEFCD7; }
+  .wrapper .title-wrapper {
+    background-color: #000000;
+    color: #eeeeee;
+    width: 100%;
+    min-height: 42px;
+    position: inherit;
+    border-radius: 4px; }
+    .wrapper .title-wrapper .title-label {
+      font-size: 2.5rem;
+      text-align: center;
+      padding: 15px 20px; }
+  .wrapper .nav-wrapper {
+    position: relative;
+    max-width: 1568px;
+    height: 40px;
+    margin: 0 auto;
+    border-bottom: 1px solid black; }
+    .wrapper .nav-wrapper .welcome-div--label {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-left: -75px;
+      margin-top: -10px;
+      font-size: 1.5rem;
+      display: block;
+      height: 20px;
+      width: 121px;
+      text-align: center; }
+    .wrapper .nav-wrapper .nav-elements--wrapper {
+      height: 100%;
+      display: inline-block;
+      min-width: 30%;
+      list-style: none;
+      margin-bottom: 0; }
+      .wrapper .nav-wrapper .nav-elements--wrapper .nav-elements {
+        height: 40px;
+        line-height: 40px;
+        float: left;
+        transition: background-color 0.3s ease; }
+        .wrapper .nav-wrapper .nav-elements--wrapper .nav-elements:hover {
+          background-color: #4A4A4A;
+          text-decoration: underline; }
+          .wrapper .nav-wrapper .nav-elements--wrapper .nav-elements:hover a {
+            color: #eee; }
+        .wrapper .nav-wrapper .nav-elements--wrapper .nav-elements a {
+          margin: 0 9px;
+          padding: 11px 0;
+          font-size: 1.5rem;
+          color: #000; }
+  .wrapper .footer {
+    background-color: #000000;
+    color: #eee;
+    text-align: center; }
+
+.home-wrapper {
+  min-height: 500px; }
+  .home-wrapper .admin-login--wrapper,
+  .home-wrapper .employee-login--wrapper {
+    display: table;
+    height: 500px; }
+  .home-wrapper .admin-login,
+  .home-wrapper .employee-login {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center; }
+    .home-wrapper .admin-login a,
+    .home-wrapper .employee-login a {
+      border: 1px solid black;
+      border-radius: 4px;
+      padding: 50px;
+      transition: background-color 0.3s ease; }
+      .home-wrapper .admin-login a:hover,
+      .home-wrapper .employee-login a:hover {
+        background-color: #4A4A4A;
+        color: #eee;
+        text-decoration: underline;
+        border-radius: 8px; }
+
+.about-wrapper,
+.contact-wrapper {
+  height: 500px;
+  width: 100%;
+  display: table; }
+  .about-wrapper .about-content,
+  .about-wrapper .contact-content,
+  .contact-wrapper .about-content,
+  .contact-wrapper .contact-content {
+    text-align: center;
+    font-size: 5rem;
+    display: table-cell;
+    vertical-align: middle; }
+
+.admin-login-form--wrapper,
+.employee-login-form--wrapper {
+  display: table;
+  text-align: center;
+  height: 500px;
+  width: 100%; }
+  .admin-login-form--wrapper .admin-login-form--content,
+  .admin-login-form--wrapper .employee-login-form--content,
+  .employee-login-form--wrapper .admin-login-form--content,
+  .employee-login-form--wrapper .employee-login-form--content {
+    width: 25%;
+    border: 1px solid;
+    margin: auto;
+    height: 460px;
+    margin-top: 20px; }
+  .admin-login-form--wrapper .employee-login-form--content .employee-login--title,
+  .employee-login-form--wrapper .employee-login-form--content .employee-login--title {
+    padding: 20px 0; }
+  .admin-login-form--wrapper .admin-welcome--wrapper,
+  .admin-login-form--wrapper .usernameField,
+  .admin-login-form--wrapper .passwordField,
+  .admin-login-form--wrapper .buttonFiled,
+  .employee-login-form--wrapper .admin-welcome--wrapper,
+  .employee-login-form--wrapper .usernameField,
+  .employee-login-form--wrapper .passwordField,
+  .employee-login-form--wrapper .buttonFiled {
+    padding: 20px 0; }
+    .admin-login-form--wrapper .admin-welcome--wrapper input,
+    .admin-login-form--wrapper .usernameField input,
+    .admin-login-form--wrapper .passwordField input,
+    .admin-login-form--wrapper .buttonFiled input,
+    .employee-login-form--wrapper .admin-welcome--wrapper input,
+    .employee-login-form--wrapper .usernameField input,
+    .employee-login-form--wrapper .passwordField input,
+    .employee-login-form--wrapper .buttonFiled input {
+      width: 75%; }
+
+.ok-btn {
+  width: 75%;
+  padding: 10px 0;
+  margin-bottom: 15px; }
+
+.cancel-btn {
+  width: 75%;
+  padding: 10px 0;
+  margin-bottom: 15px; }
+
+.isLogged-elements {
+  position: relative; }
+  .isLogged-elements .welcome-div--label {
+    margin-top: 10px !important;
+    margin-left: -61px !important; }
+  .isLogged-elements input.logout-btn {
+    position: absolute;
+    right: 0;
+    margin-right: 40px;
+    top: 2px; }
+
+.employee-details--wrapper {
+  text-align: center;
+  background-color: #FEFCD7;
+  margin-bottom: 0;
+  padding-bottom: 10px;
+  padding-top: 30px; }
+  .employee-details--wrapper .get-data-btn {
+    margin: 10px; }
+
+.search-box {
+  text-align: center;
+  margin-bottom: 25px; }
+
+.isLogged-home {
+  text-align: center;
+  margin-top: 20px; }
+  .isLogged-home .isLogged-label {
+    margin-bottom: 10px; }
+
+.employee-details {
+  margin: 10px 40px; }
+  .employee-details .employee-details--label {
+    margin: 10px 0; }
+
+.error {
+  text-align: justify;
+  margin: 10px 5px 5px 0; }
+  .error .error-label {
+    font-size: 1rem;
+    color: red !important; }
+
+/*# sourceMappingURL=styles.css.map */

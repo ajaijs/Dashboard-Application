@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class="employee-login-form--wrapper">
+        <div class="employee-login-form--content">
+        <div class="employee-login--title">
+            <div class="secure-account">Secure Account Log In</div>
+            <div ng-show="isError" class="error">
+                <span class="error-label">The information you provided does not match our records. Please re-enter your login information.</span>
+            </div>
+        </div>
+
+        <form class="employee-login--form">
+            <div class="usernameField">
+                <input type="text" name = "username" ng-model="login.username" placeholder="Employee Code">
+            </div>
+            <div class="passwordField">
+                <input type="text" name="password" ng-model="login.password" placeholder="Email Id">
+            </div>
+            <div class="buttonFiled">
+                <input type="button" class="btn btn-success ok-btn" name="Go" value="Go" ng-click="employeeLoginInit()">
+                <input type="button" class="btn btn-danger cancel-btn" name="Cancel" value="Cancel" ng-click="cancel()">
+
+            </div>
+        </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,239 @@
+$titleWrapperHeight: 42px;
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  position: relative;
+  max-width: 1568px;
+  opacity: 1;
+  &.loading {
+    opacity: 0.5;
+    background: url("giphy.gif") no-repeat fixed center;
+  }
+}
+
+.wrapper {
+  background-color: #FEFCD7;
+
+  .title-wrapper {
+    background-color: #000000;
+    color: #eeeeee;
+    width: 100%;
+    min-height: $titleWrapperHeight;
+    position: inherit;
+    border-radius: 4px;
+
+    .title-label {
+      font-size: 2.5rem;
+      text-align: center;
+      padding: 15px 20px;
+    }
+  }
+  .nav-wrapper {
+    position: relative;
+    max-width: 1568px;
+    height: 40px;
+    margin: 0 auto;
+    border-bottom: 1px solid black;
+
+    .welcome-div--label {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-left: -75px;
+      margin-top: -10px;
+      font-size: 1.5rem;
+      display: block;
+      height: 20px;
+      width: 121px;
+      text-align: center;
+    }
+    .nav-elements--wrapper {
+      height: 100%;
+      display: inline-block;
+      min-width: 30%;
+      list-style: none;
+      margin-bottom: 0;
+
+      .nav-elements {
+        height: 40px;
+        line-height: 40px;
+        float: left;
+        transition: background-color 0.3s ease;
+        &:hover {
+          background-color: #4A4A4A;
+          text-decoration: underline;
+          a {
+            color: #eee;
+          }
+        }
+        a {
+          margin: 0 9px;
+          padding: 11px 0;
+          font-size: 1.5rem;
+          color: #000;
+        }
+      }
+    }
+  }
+  .footer {
+    background-color: #000000;
+    color: #eee;
+    text-align: center;
+  }
+}
+
+// Styles for the Home Page Partial
+.home-wrapper {
+  min-height: 500px;
+  .admin-login--wrapper,
+  .employee-login--wrapper {
+    display: table;
+    height: 500px;
+  }
+  .admin-login,
+  .employee-login {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    a {
+      border: 1px solid black;
+      border-radius: 4px;
+      padding: 50px;
+      transition: background-color 0.3s ease;
+      &:hover {
+        background-color: #4A4A4A;
+        color: #eee;
+        text-decoration: underline;
+        border-radius: 8px;
+      }
+    }
+  }
+}
+
+//Styles for About and Contact Partial Page
+.about-wrapper,
+.contact-wrapper {
+  height: 500px;
+  width: 100%;
+  display: table;
+  .about-content,
+  .contact-content {
+    text-align: center;
+    font-size: 5rem;
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
+// Admin Login Page
+.admin-login-form--wrapper,
+.employee-login-form--wrapper {
+  display: table;
+  text-align: center;
+  height: 500px;
+  width: 100%;
+  .admin-login-form--content,
+  .employee-login-form--content {
+    width: 25%;
+    border: 1px solid;
+    margin: auto;
+    height: 460px;
+    margin-top: 20px;
+  }
+  .employee-login-form--content {
+    .employee-login--title {
+      padding: 20px 0;
+    }
+  }
+  .admin-welcome--wrapper,
+  .usernameField,
+  .passwordField,
+  .buttonFiled {
+    padding: 20px 0;
+    input {
+      width: 75%;
+    }
+  }
+}
+
+.ok-btn {
+  width: 75%;
+  padding: 10px 0;
+  margin-bottom: 15px;
+}
+
+.cancel-btn {
+  width: 75%;
+  padding: 10px 0;
+  margin-bottom: 15px;
+}
+
+// If A user is Logged in
+.isLogged-elements {
+  position: relative;
+
+  .welcome-div--label {
+    margin-top: 10px !important;
+    margin-left: -61px !important;
+  }
+  input.logout-btn {
+    position: absolute;
+    right: 0;
+    margin-right: 40px;
+    top: 2px;
+  }
+}
+
+// Admin Home Page
+.employee-details--wrapper {
+  text-align: center;
+  background-color: #FEFCD7;
+  margin-bottom: 0;
+  padding-bottom: 10px;
+  padding-top: 30px;
+  .get-data-btn {
+    margin: 10px;
+  }
+}
+
+.search-box {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+//
+.isLogged-home {
+  text-align: center;
+  margin-top: 20px;
+  .isLogged-label {
+    margin-bottom: 10px;
+  }
+}
+
+// employee details page
+.employee-details {
+  margin: 10px 40px;
+  .employee-details--label {
+    margin: 10px 0;
+  }
+}
+
+// Error Styles
+.error {
+  text-align: justify;
+  margin: 10px 5px 5px 0;
+  .error-label {
+    font-size: 1rem;
+    color: red !important;
+  }
+}
+
+@media screen and (max-device-width: 768px) {
+  .nav-elements--wrapper {
+
+  }
+
+}
+

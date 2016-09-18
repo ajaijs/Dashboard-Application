@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard Application</title>
+    <script src="App/Libs/angular.min.js"></script>
+    <script src="App/Libs/angular-route.min.js"></script>
+    <script src="App/Libs/angular-ui-router.js"></script>
+    <script src="App/Libs/jquery-2.1.4.min.js"></script>
+    <script src="App/Libs/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="App/Libs/bootstrap.min.css"/>
+
+    <script src="App/app.js"></script>
+    <script src="App/Controllers/HomeController.js"></script>
+    <script src="App/Controllers/AdminController.js"></script>
+    <script src="App/Controllers/EmployeeController.js"></script>
+
+    <script src="App/Factories/LoginFactory.js"></script>
+
+    <link rel="stylesheet" href="App/SASS/styles.css">
+
+</head>
+
+<body id="body" class="body" ng-class="{loading: loading}" ng-controller="AdminController">
+    <div class="wrapper container">
+        <div class="row">
+            <div class="title-wrapper">
+                <div class="title-label">
+                    <span>Dashboard Application</span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="nav-wrapper">
+                <span class="welcome-div--label" ng-hide="isLogged">Welcome Guest!</span>
+                <div class="isLogged-elements" ng-show="isLogged">
+                    <span class="welcome-div--label"> Welcome {{loggedUserName}}</span>
+                    <input type="button" class="btn btn-danger logout-btn" ng-click="logoutUser()" name="logoutBtn" value="Logout">
+                </div>
+                <ul class="nav-elements--wrapper">
+                    <li class="nav-elements"><a href="#/">Home</a></li>
+                    <li class="nav-elements"><a href="#/about">About</a></li>
+                    <li class="nav-elements"><a href="#/contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="partial-view">
+                <div ng-view></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="footer">
+                &copy; Dashboard Application : {{monthData}}/{{dateData}}/{{yearData}}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

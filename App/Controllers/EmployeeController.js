@@ -21,9 +21,6 @@ app.controller('EmployeeController', function($scope, $rootScope, $location, $ht
             })
             .error(function(response){
                 console.log("Something Went Wrong" + response);
-            })
-            .always(function(response){
-                console.log(response);
             });
     };
     function validateEmployee(data, username, password){
